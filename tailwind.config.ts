@@ -10,28 +10,54 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        border: "hsl(240 12% 90%)",
-        input: "hsl(240 12% 90%)",
-        ring: "hsl(221 83% 53%)",
-        background: "hsl(0 0% 100%)",
-        foreground: "hsl(224 71% 4%)",
+        border: "var(--border)",
+        input: "var(--input)",
+        ring: "var(--ring)",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
         primary: {
-          DEFAULT: "hsl(221 83% 53%)",
-          foreground: "hsl(210 40% 98%)"
+          DEFAULT: "var(--primary)",
+          foreground: "var(--primary-foreground)"
         },
         muted: {
-          DEFAULT: "hsl(210 40% 96%)",
-          foreground: "hsl(215 16% 47%)"
+          DEFAULT: "var(--muted)",
+          foreground: "var(--muted-foreground)"
         },
         card: {
-          DEFAULT: "hsl(0 0% 100%)",
-          foreground: "hsl(224 71% 4%)"
+          DEFAULT: "var(--card)",
+          foreground: "var(--card-foreground)"
+        },
+        accent: {
+          DEFAULT: "var(--accent)",
+          foreground: "var(--accent-foreground)"
+        },
+        sidebar: {
+          DEFAULT: "var(--sidebar)",
+          foreground: "var(--sidebar-foreground)",
+          border: "var(--sidebar-border)"
         }
       },
       borderRadius: {
-        lg: "0.75rem",
-        md: "0.55rem",
-        sm: "0.4rem"
+        DEFAULT: "0px",
+        none: "0px",
+        sm: "0px",
+        md: "0px",
+        lg: "0px",
+        xl: "0px",
+        "2xl": "0px",
+        full: "0px"
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"]
+      },
+      animation: {
+        "glow": "glow 2s ease-in-out infinite alternate"
+      },
+      keyframes: {
+        glow: {
+          "0%": { boxShadow: "0 0 5px hsl(221 83% 53% / 0.3)" },
+          "100%": { boxShadow: "0 0 20px hsl(221 83% 53% / 0.5)" }
+        }
       }
     }
   },
